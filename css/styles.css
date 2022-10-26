@@ -63,13 +63,6 @@ html {
   fill: var(--accent-color);
 }
 
-.header .link:hover:not(.logo),
-.header .link:focus:not(.logo),
-.footer .link:hover:not(.logo),
-.footer .link:focus:not(.logo) {
-  color: var(--accent-color);
-}
-
 .section-title {
   font-size: 36px;
   line-height: 1.16;
@@ -146,6 +139,8 @@ img {
   letter-spacing: 0.02em;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header .contact {
@@ -159,6 +154,15 @@ img {
   padding-bottom: 32px;
   align-items: center;
   gap: 10px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header .link:hover:not(.logo),
+.header .link:focus:not(.logo),
+.footer .link:hover:not(.logo),
+.footer .link:focus:not(.logo) {
+  color: var(--accent-color);
 }
 
 /* ---------icons-------------------- */
@@ -235,6 +239,8 @@ img {
 
   padding: 10px 20px;
   margin-top: 30px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-btn:focus,
@@ -367,6 +373,9 @@ img {
   height: 44px;
   border-radius: 50%;
   color: var(--icon-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .teammates .social-icon {
@@ -375,8 +384,8 @@ img {
   fill: currentColor;
 }
 
-.social-links .link:hover,
-.social-links .link:focus {
+.team-social-link:hover,
+.team-social-link:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
@@ -426,6 +435,9 @@ img {
   color: var(--icon-color);
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* svg-in-link */
@@ -459,6 +471,8 @@ img {
   font-style: normal;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .contact {
@@ -507,6 +521,8 @@ img {
   border-radius: 50%;
   color: var(--primary-white-color);
   background-color: var(--footer-icon-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .social-icon {
@@ -533,8 +549,11 @@ portfolio filter-buttons */
   background-color: var(--light-bg-color);
   border-color: transparent;
   border-radius: 4px;
-
   padding: 6px 22px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
@@ -582,10 +601,12 @@ portfolio filter-buttons */
 .project-card {
   flex-basis: calc((100% - 2 * var(--card-gap)) / 3);
   background-color: var(--primary-white-color);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-link {
   display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-content {
@@ -633,6 +654,7 @@ portfolio filter-buttons */
   width: 100%;
   height: 100%;
   background-color: var(--card-overlay-bg-color);
+
   transform: translateY(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -666,5 +688,4 @@ portfolio filter-buttons */
 .project-link:hover .overlay,
 .project-link:focus .overlay {
   transform: translateY(-100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
